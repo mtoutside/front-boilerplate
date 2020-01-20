@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+$ENV: env();
+$test-img-path: constants("assetsPath") + "images/";
+
+// img_path
+$img-path: "../images/";
+
+// size
+$min-width: 100%;
+//$max-width:100%;
+$contants-width: 100%;
+$sp-container: 375px;
+$pc-container: 900px;
+$break-width: 375px;
+
+@mixin pc {
+  @media (min-width: $break-width + 1) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: $break-width) {
+    @content;
+  }
+}
+
+// color
+$color: #ffffff;
+// font
+$fs-base: 1.4rem;
+$line-base: 2;
+
+@mixin font-default {
+  font-family: -apple-system, BlinkMacSystemFont, "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN",
+    "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  @media all and (-ms-high-contrast: none) {
+    & {
+      font-family: "メイリオ", Meiryo, "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN",
+        "Hiragino Kaku Gothic Pro", "ＭＳ ゴシック", sans-serif;
+    }
+  }
+}
+@mixin font-mincho {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+}
+
+// color
+$text-color: #000;
+
+// set_prefix
+@mixin set-prefix($property, $value) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, "" {
+    #{$prefix}#{$property}: $value;
+  }
+}
+
+// easing
+@mixin easeInCubic($property: all, $speed: 0.4s) {
+  @include set-prefix(transition, $property $speed cubic-bezier(0.55, 0.055, 0.675, 0.19));
+  @include set-prefix(transition-timing-function, cubic-bezier(0.55, 0.055, 0.675, 0.19));
+}
+@mixin easeOutCubic($property: all, $speed: 0.4s) {
+  @include set-prefix(transition, $property $speed cubic-bezier(0.215, 0.61, 0.355, 1));
+  @include set-prefix(transition-timing-function, cubic-bezier(0.215, 0.61, 0.355, 1));
+}
+@mixin easeInOutCubic($property: all, $speed: 0.4s) {
+  @include set-prefix(transition, $property $speed cubic-bezier(0.645, 0.045, 0.355, 1));
+  @include set-prefix(transition-timing-function, cubic-bezier(0.645, 0.045, 0.355, 1));
+}

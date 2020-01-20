@@ -1,0 +1,50 @@
+{
+  "name": "html_temp",
+  "version": "1.0.0",
+  "description": "html template uses gulp4, webpack4",
+  "main": "script.js",
+  "private": true,
+  "scripts": {
+    "gulp": "gulp",
+    "server": "browser-sync start --config bs-config.js",
+    "webpack": "webpack -d -w",
+    "start": "gulp & npm run server & webpack -d -w",
+    "lint": "eslint ./src/ --fix",
+    "build": "gulp build & webpack -d",
+    "build-stag": "gulp build & webpack -d --env=stag",
+    "build-prod": "gulp build & webpack -p --env=prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "delete-empty": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-standard": "^4.0.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-ejs": "^3.2.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.4.1",
+    "minimist": "^1.2.0",
+    "prettier": "^1.19.1",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
+  },
+  "dependencies": {
+    "reset-css": "^4.0.1"
+  }
+}

@@ -1,0 +1,11 @@
+// util
+
+// clearfix
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+// font
+.ff-mincho {@include font-mincho;}
