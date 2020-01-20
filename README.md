@@ -1,4 +1,4 @@
-OREO
+Front Boilerplate
 ====================
 
 - node.js >= v10.16.2
@@ -30,5 +30,6 @@ npm start
 
 ### Misc
 eslint, Prettierの参考
+
 [PrettierとLinterを併用する](https://qiita.com/sigwyg/items/ebb21ef70550cee7a163)
 [eslintの設定からprettierとの併用までの流れ](https://qiita.com/shoichiimamura/items/0ba005889e3e90ee66d9{})
