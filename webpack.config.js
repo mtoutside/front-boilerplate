@@ -19,7 +19,6 @@ module.exports = (env = "dev") => {
           enforce: "pre",
           test: /\.js$/,
           exclude: /node_module/,
-          loader: "eslint-loader",
           options: {
             fix: true,
           },
