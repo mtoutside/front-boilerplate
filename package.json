@@ -44,5 +44,8 @@
     "reset-css": "^5.0.1",
     "sass": "^1.53.0",
     "webpack-stream": "^7.0.0"
+  },
+  "devDependencies": {
+    "glob-parent": ">=5.1.2"
   }
 }
